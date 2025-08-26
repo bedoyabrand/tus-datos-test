@@ -67,3 +67,20 @@ export async function myRegistrations(): Promise<Registration[]> {
   const { data } = await api.get<Registration[]>("/events/me/registrations");
   return data;
 }
+
+export async function createEvent(body: {
+  name: string;
+  description?: string;
+  start_at: string;
+  end_at: string;
+  venue?: string;
+  capacity_total?: number | null;
+}): Promise<Event> {
+  const { data } = await api.post<Event>("/events", body);
+  return data;
+}
+
+export async function publishEvent(eventId: number | string): Promise<Event> {
+  const { data } = await api.patch<Event>(`/events/${eventId}/publish`);
+  return data;
+}

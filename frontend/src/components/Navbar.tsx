@@ -9,7 +9,6 @@ export default function Navbar() {
     <header className="bg-white border-b border-gray-200">
       <nav className="container-page flex items-center gap-4">
         <Link to="/" className="text-lg font-semibold text-indigo-700">Mis Eventos</Link>
-        <Link to="/" className="btn btn-ghost">Eventos</Link>
         {token && <Link to="/me" className="btn btn-ghost">Mis registros</Link>}
         <div className="ml-auto" />
         {!token ? (

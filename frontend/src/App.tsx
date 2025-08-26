@@ -6,6 +6,8 @@ import EventsList from "./pages/EventsList";
 import EventDetail from "./pages/EventDetail";
 import Profile from "./pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
+import EventCreate from "./pages/EventCreate";
+
 
 export default function App() {
   return (
@@ -21,6 +23,14 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/events/new"
+          element={
+            <ProtectedRoute>
+              <EventCreate />
             </ProtectedRoute>
           }
         />
