@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+html, body, #root { height: 100%; }
+body { @apply bg-gray-50 text-gray-900; }
+
+.container-page { @apply max-w-5xl mx-auto px-4 py-6; }
+.card { @apply bg-white rounded-xl shadow-sm border border-gray-200; }
+.btn { @apply inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition; }
+.btn-primary { @apply bg-indigo-600 text-white hover:bg-indigo-700; }
+.btn-ghost { @apply hover:bg-gray-100; }
+.input { @apply rounded-lg border border-gray-300 px-3 py-2 outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500; }
+.select { @apply rounded-lg border border-gray-300 px-3 py-2 outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500; }
+.label { @apply text-sm font-medium text-gray-700; }
